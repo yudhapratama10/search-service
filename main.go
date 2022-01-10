@@ -26,6 +26,7 @@ func main() {
 	handler := handler.NewProductHandler(uc)
 
 	http.HandleFunc("/search", handler.SearchFootballClub)
+	http.HandleFunc("/autocomplete", handler.Autocomplete)
 
 	fmt.Println("Starting Service")
 	http.ListenAndServe(":8080", nil)

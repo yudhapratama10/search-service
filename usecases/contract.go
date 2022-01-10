@@ -11,6 +11,7 @@ type footballUsecase struct {
 
 type FootballUsecaseContract interface {
 	Search(keyword string, hasStadium bool, page, take int) ([]model.FootballClub, error)
+	Autocomplete(keyword string) ([]model.FootballClub, error)
 }
 
 func NewFootballUsecase(repo repository.FootballRepositoryContract) FootballUsecaseContract {

@@ -12,6 +12,7 @@ type FootballHandler struct {
 
 type FootballHandlerContract interface {
 	SearchFootballClub(w http.ResponseWriter, r *http.Request)
+	Autocomplete(w http.ResponseWriter, r *http.Request)
 }
 
 func NewProductHandler(footballUsecase usecase.FootballUsecaseContract) FootballHandlerContract {

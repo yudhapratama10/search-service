@@ -13,3 +13,13 @@ func (usecase *footballUsecase) Search(keyword string, hasStadium bool, page, ta
 
 	return data, nil
 }
+
+func (usecase *footballUsecase) Autocomplete(keyword string) ([]model.FootballClub, error) {
+
+	data, err := usecase.repo.Autocomplete(keyword)
+	if err != nil {
+		return []model.FootballClub{}, err
+	}
+
+	return data, nil
+}
