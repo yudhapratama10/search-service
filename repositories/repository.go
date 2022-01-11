@@ -9,7 +9,7 @@ import (
 	"github.com/yudhapratama10/search-service/model"
 )
 
-var resp map[string]interface{}
+// var resp map[string]interface{}
 
 func (repo *footballRepository) Search(keyword string, hasStadium bool, page, take int) ([]model.FootballClub, error) {
 

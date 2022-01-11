@@ -72,5 +72,6 @@ func (handler *FootballHandler) Autocomplete(w http.ResponseWriter, r *http.Requ
 		return
 	} else {
 		http.Error(w, "", http.StatusMethodNotAllowed)
+		return
 	}
 }
